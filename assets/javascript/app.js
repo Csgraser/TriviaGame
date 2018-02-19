@@ -6,7 +6,7 @@ var unansweredCount = 0;
 var clockRunning = false;
 
 $(document).ready(function () {
-
+	console.log(count);
 	$("#duringGame").hide();
 	$("#endGame").hide();
 
@@ -17,8 +17,11 @@ $(document).ready(function () {
 
 		$("#duringGame").show();
 
+		$('input:radio:checked').attr('checked', false);
+
+
 		startCountdown();
-		return;
+
 	});
 
 	$("#restartButton").on("click", function () {
@@ -32,20 +35,21 @@ $(document).ready(function () {
 
 
 		count = 30;
-		return;
+		$('#timeLeft').html(count + " Seconds");
+
 	})
 
+	$("#finishButton").on("click", function () {
+		timesUp();
+		$("#duringGame").hide();
+	});
 
 	function countDown() {
 		count--;
 		$('#timeLeft').html(count + " Seconds");
 
-		$("#finishButton").on("click", function () {
-			count = 0;
-			return;
-		});
 
-		if (count == -1) {
+		if (count === 0) {
 
 			timesUp();
 
@@ -59,7 +63,7 @@ $(document).ready(function () {
 	}
 
 	function timesUp() {
-		// The :checked selector works for checkboxes, radio buttons, and options of select elements ---- api.jquery.com/val/
+		// This code works by grabbing the input selector from html then finds the radio element. finds the name of that element inside the[] brackets. the checked part is making sure that JS is grabbing only the checked answer and running its value.
 		var Q1 = $('input:radio[name="q1"]:checked').val();
 		var Q2 = $('input:radio[name="q2"]:checked').val();
 		var Q3 = $('input:radio[name="q3"]:checked').val();
