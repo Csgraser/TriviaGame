@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Visigoth Trivia</title>
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<img src="assets/images/visigoth-logo.jpg">
+	<title>Visigoth Trivia</title>
+</head>
+
+<body>
+
+	<!-- Game Start -->
+	<div id="starting">
+		<h1 class="logo">Visigoth Trivia</h1>
+
+		<button id="startButton">START</button>
+	</div>
+
+	<!-- During The Game -->
+	<div id="duringGame">
+
+		<!-- Timer -->
+		<h1 id="timer">Time Remaining:
+			<span id="timeLeft">30 SECONDS</span>
+		</h1>
+
+		<!-- Questions -->
+		<h1>1. What city does Visigoth hail from?</h1>
+		<!-- SLC -->
+		<input type="radio" name="q1" value="Denver, Colorado">Denver,Colorado
+		<input type="radio" name="q1" value="Salt Lake City, Utah">Salt Lake City, Utah
+		<input type="radio" name="q1" value="Los Angeles, California">Los Angeles, California
+		<input type="radio" name="q1" value="Boise, Idaha">Boise, Idaho
+
+		<h1>2. Which Visigoth album was released in February 2018?</h1>
+		<!-- Conqueror's Oath -->
+		<input type="radio" name="q2" value="Conqueror's Oath">Conqueror's Oath
+		<input type="radio" name="q2" value="Final Spell">Final Spell
+		<input type="radio" name="q2" value="The Revenant King">The Revenant King
+		<input type="radio" name="q2" value="Vengeance">Vengeance
+
+		<h1>3. Who is the lead guitarist for Visigoth?</h1>
+		<!-- Leeland Campana -->
+		<input type="radio" name="q3" value="Jake Rogers">Jake Rogers
+		<input type="radio" name="q3" value="Jamison Palmer">Jamison Palmer
+		<input type="radio" name="q3" value="Matt Brotherton">Matt Brotherton
+		<input type="radio" name="q3" value="Leeland Campana">Leeland Campana
+		<input type="radio" name="q3" value="Mikey T.">Mikey T.
+
+		<h1>4. Which Visigoth song is based off of Magic: the Gathering?</h1>
+		<!-- Final Spell -->
+		<input type="radio" name="q4" value="Mammoth Rider">Mammoth Rider
+		<input type="radio" name="q4" value="Iron Brotherhood">Iron Brotherhood
+		<input type="radio" name="q4" value="The Conqueror's Oath">The Conqueror's Oath
+		<input type="radio" name="q4" value="Final Spell">Final Spell
+
+		<h1>5. Which Visigoth song is a cover song?</h1>
+		<!-- Necropolis -->
+		<input type="radio" name="q5" value="Seven Golden Ships">Seven Golden Ships
+		<input type="radio" name="q5" value="Creature of Desire">Creature of Desire
+		<input type="radio" name="q5" value="Necropolis">Necropolis
+		<input type="radio" name="q5" value="Dungeon Master">Dungeon Master
+
+		<br>
+
+		<button id="finishButton">Finish</button>
+
+
+	</div>
+
+	<div id="endGame">
+
+		<h1 id="finish">You're Finished!</h1>
+		<br>
+
+		<h1>Correct Answers:
+			<span id="correctAnswers">0</span>
+		</h1>
+		<h1>Incorrect Answers:
+			<span id="wrongAnswers">0</span>
+		</h1>
+		<h1>Unanswered:
+			<span id="unanswered">0</span>
+		</h1>
+
+		<button id="restartButton">Retry?</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	 crossorigin="anonymous"></script>
+	<script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
