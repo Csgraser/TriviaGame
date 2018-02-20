@@ -1,9 +1,7 @@
 var count = 30;
-
 var correctCount = 0;
 var wrongCount = 0;
 var unansweredCount = 0;
-var clockRunning = false;
 
 $(document).ready(function () {
 	console.log(count);
@@ -24,6 +22,11 @@ $(document).ready(function () {
 
 	});
 
+	$("#finishButton").on("click", function () {
+		timesUp();
+		$("#duringGame").hide();
+	});
+
 	$("#restartButton").on("click", function () {
 
 		correctCount = 0;
@@ -39,10 +42,6 @@ $(document).ready(function () {
 
 	})
 
-	$("#finishButton").on("click", function () {
-		timesUp();
-		$("#duringGame").hide();
-	});
 
 	function countDown() {
 		count--;
